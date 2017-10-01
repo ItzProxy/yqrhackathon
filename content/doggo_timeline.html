@@ -1,0 +1,213 @@
+<br>
+
+<!--MODALs-->
+<div id="notify-urgent" class="modal notifiable">
+    <div class="modal-header center" style="background: darkorange">
+        <h5>NOTIFY URGENT ISSUE</h5>
+        <hr>
+        An email will be sent to the admins about the medical issue or emergency 
+        <br>
+        <img src="img/bell.png">
+    </div>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat right">
+            <i class="material-icons left">close</i>&nbsp;Close
+    </a>
+    <div class="modal-content center">
+        <form method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="subject" name="subject" type="text" required>
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="message" name="message" class="materialize-textarea"></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="col s12">
+                    <div class="media z-depth-2">
+                        <img class="img-preview">
+                        <video class="video-preview"></video>
+                        <br>
+                        <h5 class="help-txt center">Click here to add an image/video</h5>
+                    </div>
+                    <input type="file" name="media-file" accept="image/*,video/*"
+                           style="display: none">
+                    <br>
+                    <div class="loading" style="color: gray">
+                        <i class="material-icons">alarm</i><br>
+                        LOADING
+                    </div>
+                    <br>
+                </div>
+                <div class="col s12 l6 action-button">
+                    <button type="reset" class="action-button btn waves-effect waves-light"
+                            style="background: darkorange">
+                        <i class="material-icons left">autorenew</i>&nbsp;Clear
+                    </button>
+                </div>
+                <div class="col s12 l6">
+                    <button type="submit" class="action-button btn waves-effect waves-light"
+                            style="background: darkorange">
+                        <i class="material-icons left">send</i>&nbsp;Send
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="add-event" class="modal notifiable">
+    <div class="modal-header center" style="background: steelblue">
+        <h5>ADD EVENT TO TIMELINE</h5>
+        <hr>
+        An event will be added to the profile timeline 
+        <br>
+        <img src="img/add_event.png">
+    </div>
+    <a class="modal-action modal-close waves-effect waves-green btn-flat right">
+            <i class="material-icons left">close</i>&nbsp;Close
+    </a>
+    <div class="modal-content center">
+        <form method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="title" name="title" type="text" required>
+                    <label for="title">Title</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="description" name="description" class="materialize-textarea"></textarea>
+                    <label for="description">Description</label>
+                </div>
+                <div class="col s12">
+                    <div class="media z-depth-2">
+                        <img class="img-preview">
+                        <video class="video-preview"></video>
+                        <br>
+                        <h5 class="help-txt center">Click here to add an image/video</h5>
+                    </div>
+                    <input type="file" name="media-file" id="media-file" accept="image/*,video/*"
+                           style="display: none">
+                    <br>
+                    <div class="loading" style="color: gray">
+                        <i class="material-icons">alarm</i><br>
+                        LOADING
+                    </div>
+                    <br>
+                </div>
+                <div class="col s12 l6 action-button">
+                    <button type="reset" class="action-button btn waves-effect waves-light"
+                            style="background: steelblue">
+                        <i class="material-icons left">autorenew</i>&nbsp;Clear
+                    </button>
+                </div>
+                <div class="col s12 l6">
+                    <button type="submit" class="action-button btn waves-effect waves-light"
+                            style="background: steelblue">
+                        <i class="material-icons left">add</i>&nbsp;Add Event
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="row center dog-action-row">    
+    <div class="col s12 l6 m12">
+        <a class="btn waves-effect waves-light s12 back1 modal-trigger"
+           onclick="$('#add-event').modal('open')">
+            <i class="material-icons left">stars</i>
+            Add event to timeline
+        </a>
+    </div>
+    <div class="col l6 s12 m12">
+        <a class="btn waves-effect waves-light s12 back2 modal-trigger"
+           onclick="$('#notify-urgent').modal('open')">
+            <i class="material-icons left">announcement</i>
+            Notify Urgent Issue
+        </a>
+    </div>
+</div>
+<div class="dog-descriptor center z-depth-2 row">
+    <div class="img-container valign-wrapper">
+        <img src="img/dogs/doggo1.jpeg">
+    </div>
+    <div class="title">
+        Goodboi Johnson
+    </div>
+    <hr>
+    <div class="description">
+        Hyperactive pupper that loves chewing things that he really should not.
+        Currently in foster care with the johnson family. 
+    </div>
+    <div class="description">
+        <a id="edit-profile" class="btn waves-effect waves-light"><i class="material-icons left">edit</i>
+        &nbsp;Edit Profile</a>
+    </div>
+    <div class="description">
+        <a class="btn red waves-effect waves-light" id="del-profile">
+            <i class="material-icons left">delete</i>&nbsp;
+            Remove Profile
+        </a>
+    </div>
+</div>
+<div class="dog-details z-depth-2 row center">
+    <div class="field field-title">
+        Breed
+    </div>
+    <div class="field field-value">
+        Labrador
+    </div>
+    <div class="field field-title">
+        Personality
+    </div>
+    <div class="field field-value">
+        Really friendly, and also kinda smart. He'll know when you're trying to be too smart
+    </div>
+    <div class="field field-value">
+        <a class="btn waves-effect waves-light"><i class="material-icons left">edit</i>
+        &nbsp;Add Detail</a>
+    </div>
+</div>
+<div class="timeline row">
+    <div class="timeline-block center z-depth-2">
+        <div class="media">
+            <img src="img/dogs/Dog_jump.jpg">
+        </div>
+        <div class="title">
+            He's learning to jump <3
+        </div>
+        <hr>
+        <div class="description">
+            Omg today goodboi finally did his biggest leap!! So proud!
+        </div>
+        <div class="timestamp">
+            <small>Posted on Friday, Sep 29 10:56 pm</small>
+            <a class="btn-floating btn waves-effect waves-light right">
+                <i class="material-icons">close</i>
+            </a>
+        </div>
+    </div>
+    <br><br>
+    <div class="timeline-block alert-block center z-depth-2">
+        <div class="alert-bar">
+            <img src="img/alarm.png" height="32">
+        </div>
+        <div class="media">
+            <img src="img/dogs/sickdog.jpg">
+        </div>
+        <div class="title">
+            Hope he gets well soon :'(
+        </div>
+        <hr>
+        <div class="description">
+            He's been gloomy all day, won't even wag his tail
+        </div>
+        <div class="timestamp">
+            <small>Posted on Saturday, Sep  4:16 am</small>
+            <a class="btn-floating btn waves-effect waves-light right">
+                <i class="material-icons">close</i>
+            </a>
+        </div>
+    </div>
+</div>
